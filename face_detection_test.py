@@ -7,6 +7,7 @@ from ibug.face_detection import RetinaFacePredictor, S3FDPredictor
 from ibug.face_detection.utils import SimpleFaceTracker, HeadPoseEstimator
 
 
+
 def main() -> None:
     # Parse command-line arguments
     parser = ArgumentParser()
@@ -88,7 +89,7 @@ def main() -> None:
                                                  int(vid.get(cv2.CAP_PROP_FRAME_HEIGHT))),
                                       fourcc=cv2.VideoWriter_fourcc(*args.fourcc))
             assert out_vid.isOpened()
-
+        print(" ")
         # Process the frames
         frame_number = 0
         window_title = os.path.splitext(os.path.basename(__file__))[0]
